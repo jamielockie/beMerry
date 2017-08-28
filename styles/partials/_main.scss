@@ -1,0 +1,206 @@
+
+.title-container {
+	height: 100vh;
+	background: linear-gradient(45deg, rgba(225, 225, 225, 0.3), rgba(225, 225, 225, 0.1)), url(../styles/assets/stefan-johnson-124186.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	h1 {
+		@include respond-to("large") {
+			font-size: 3rem;
+		}
+		@include respond-to("small") {
+			letter-spacing: 25px;
+		}
+	}
+	a.creditBadge {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+}
+
+.userInputs {
+	background-color: rgb(238, 238, 236);
+	padding: 120px 0px;
+	.ingredientForm {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	input[type="text"] {
+		padding: 15px;
+		font-family: 'lato', sans-serif;
+		font-size: 20px;
+		background-color: white;
+		border: 0;
+		margin: 10px;
+		border-radius: 10px;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+		@include respond-to("medium") {
+			width: 66%;
+		}
+		@include respond-to("small") {
+			width: 100%;
+			margin: 10px 20px;
+		}
+	}
+	input[type="submit"] {
+		background-color: white;
+		font-family: 'lato', sans-serif;
+		font-size: 15px;
+		margin: 20px;
+		border-radius: 10px;
+		padding: 10px;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.40);
+		&:hover {
+			box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.40);
+			transform: translateY(-3px);
+		}
+		&:active {
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.40);
+		}
+		@include respond-to("medium") {
+			display: block;
+			width: 66%;
+		}
+	}
+	i {
+		position: relative;
+		display: none;
+		left: 50px;
+		margin-left: -50px;
+	}
+	.loading {
+		display: inline-block;
+	}
+}
+
+.appOutputs {
+	background-color: rgb(238, 238, 236);
+}
+
+.recipesContainer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.winesContainer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.wrapper {
+	max-width: 1125px;
+	margin: 0 auto;
+}
+
+.card {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+	max-width: 33%;
+	padding: 5px;
+	margin: 15px 0px;
+	border-radius: 5px;
+	background-color: white;
+	position: relative;
+	text-align: center;
+	@include respond-to("medium") {
+		max-width: calc(50% - 20px);
+	}
+	@include respond-to("small") {
+		max-width: calc(100% - 20px);
+	}
+	img {
+		width: 100%;
+		position: relative;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+
+
+.container img {
+	width: 60%;
+}
+
+.container {
+	position: relative;
+	img {
+		width: 100%;
+		position: relative;
+	}
+}
+
+.overlay {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 4px);
+	background: rgba(0, 0, 0, 0);
+	&:hover {
+		background: rgba(0, 0, 0, 0.3);
+	}
+	&:hover button {
+		display: block;
+	}
+	button {
+		display: none;
+		transition: background 0.5s ease;
+		color: white;
+		width: 66%;
+		margin: 10px;
+		background: rgba(0, 0, 0, 0.7);
+		border: 4px solid white;
+		color: white;
+		padding: 12px 25px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 16px;
+		&:hover {
+			background: rgba(225, 225, 225, 0.3);
+		}
+	}
+	button a {
+		color: white;
+	}
+	button i {
+		color: rgba(225, 225, 225, 0.8);
+	}
+}
+
+.card1 {
+	animation-delay: 0.3s
+}
+
+.card2 {
+	animation-delay: 0.6s
+}
+
+.card3 {
+	animation-delay: 0.9s
+}
+
+.card4 {
+	animation-delay: 1.2s;
+}
+
+.card5 {
+	animation-delay: 1.5s;
+}
